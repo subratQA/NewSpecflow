@@ -28,7 +28,7 @@ namespace Specflow.ActionUtilities
 
         public static void ScrollIntoView(By webElement)
         {
-            ((OpenQA.Selenium.IJavaScriptExecutor)ObjectRepository.driver).ExecuteScript("arguments[0].scrollIntoView(false);", webElement);
+            ((IJavaScriptExecutor)ObjectRepository.driver).ExecuteScript("arguments[0].scrollIntoView(false);", webElement);
         }
     }
 }
