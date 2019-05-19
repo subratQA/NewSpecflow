@@ -92,15 +92,12 @@
         <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
       </ItemGroup>
     </When>
-    <Otherwise>
-      <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
-      </ItemGroup>
-    </Otherwise>
+    <Otherwise />
   </Choose>
   <ItemGroup>
     <Compile Include="ActionUtilities\ControlUtilities.cs" />
     <Compile Include="ActionUtilities\LoginUtil.cs" />
+    <Compile Include="BaseClasses\BaseClass.cs" />
     <Compile Include="ComponentHelper\BrowserHelper.cs" />
     <Compile Include="ComponentHelper\ButtonHelper.cs" />
     <Compile Include="ComponentHelper\GenericHelper.cs" />
@@ -108,6 +105,7 @@
     <Compile Include="ComponentHelper\TextBoxHelper.cs" />
     <Compile Include="Configuration\AppConfigReader.cs" />
     <Compile Include="Configuration\BrowserType.cs" />
+    <Compile Include="CustomException\NoSuchDriverFound.cs" />
     <Compile Include="Definations\Class1.cs" />
     <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="Pages\PageClass_Home.cs" />
@@ -122,6 +120,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
