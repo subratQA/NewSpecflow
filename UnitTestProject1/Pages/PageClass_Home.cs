@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using Specflow.BaseClasses;
+using Specflow.ComponentHelper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,6 +57,11 @@ namespace Specflow.Pages
                     break;
             }
             return new PageClass_EnterStudyDetail(iDriver);
+        }
+
+        public static bool IsUserInHomePage()
+        {
+            return true;
         }
     }
 }
