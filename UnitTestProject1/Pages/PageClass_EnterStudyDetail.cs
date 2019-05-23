@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
 using Specflow.BaseClasses;
 using Specflow.ComponentHelper;
@@ -36,9 +37,9 @@ namespace Specflow.Pages
         [FindsBy(How = How.Id, Using = "ctl00$ctl00$ContentBody$ContentBody$CancelBtn")]
         private IWebElement cancelbtn;
 
-        public PageClass_EnterStudyDetail(IWebDriver driver) : base(driver)
+        public PageClass_EnterStudyDetail(IWebDriver _driver) : base(_driver)
         {
-            this.iDriver = driver;
+            this.iDriver = _driver;
         }
 
         public PageClass_StudySave CreateNewStudy(string studyname, string studylabel, string protocol, string protcollabel, string studyIndi, string therap, string client, string target)

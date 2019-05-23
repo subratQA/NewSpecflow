@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Support.PageObjects;
 using Specflow.BaseClasses;
 using Specflow.ComponentHelper;
@@ -30,9 +31,9 @@ namespace Specflow.Pages
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ctl00_ContentLeft_ContentLeft_Actions2_DocumentLinksRepeater_ctl04_divDocLink']/a")]
         private IWebElement ECD;
 
-        public PageClass_StudySave(IWebDriver driver) : base(driver)
+        public PageClass_StudySave(IWebDriver _driver) : base(_driver)
         {
-            this.iDriver = driver;
+            this.iDriver = _driver;
         }
         #region ActionUtilities
         public void ClickLinkFromActionPallet(string linkname)

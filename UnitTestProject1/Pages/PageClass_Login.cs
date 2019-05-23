@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
+using OpenQA.Selenium.Remote;
+using SeleniumExtras.PageObjects;
 using Specflow.BaseClasses;
 using Specflow.ComponentHelper;
 using Specflow.Settings;
@@ -14,7 +15,7 @@ namespace Specflow.Pages
 {
     public class PageClass_Login:PageBase
     {
-        private IWebDriver iDriver;
+        public IWebDriver iDriver;//ObjectRepository.driver;
         #region WebElements
         // private IWebElement userNamefield = GenericHelper.GetElement(By.Id("Login_ContentBody_txtUsername"));
         //  private IWebElement passwordfield = GenericHelper.GetElement(By.Id("Login_ContentBody_txtPassword"));
@@ -30,15 +31,19 @@ namespace Specflow.Pages
         [FindsBy(How = How.Id, Using = "Login_ContentBody_btnLogin")]
         private IWebElement lgnBttn;
 
+       // IWebElement username => iDriver.FindElementById("Login_ContentBody_txtUsername");
+        //IWebElement passwrd => iDriver.FindElementById("Login_ContentBody_txtPassword");
+        //IWebElement lgnBttn => iDriver.FindElementById("Login_ContentBody_btnLogin");
+
 
         #endregion
 
         #region contructor
 
-        public PageClass_Login(IWebDriver driver):base(driver) //calling the constructor of parent class
+        public PageClass_Login(IWebDriver _driver) :base(_driver) //calling the constructor of parent class
         {
             //PageFactory.InitElements(ObjectRepository.driver, this);
-            this.iDriver = driver;
+            this.iDriver = _driver;
         }
 
         #endregion
@@ -65,6 +70,7 @@ namespace Specflow.Pages
 
             public PageClass_Home loginToDesigner(string uname, string pwd)
             {
+                NavigationHelper.NavigateToURL(ObjectRepository.config.getUrl());
                 username.Clear();
                 Thread.Sleep(250);
                 username.SendKeys(uname);

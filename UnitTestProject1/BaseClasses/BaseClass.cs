@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Remote;
 using Specflow.ComponentHelper;
 using Specflow.Configuration;
 using Specflow.CustomException;
@@ -15,6 +16,7 @@ using System.Threading.Tasks;
 
 namespace Specflow.BaseClasses
 {
+    [TestClass]
     public class BaseClass
     {
         private static ChromeOptions GetChromeOptions()
@@ -39,22 +41,22 @@ namespace Specflow.BaseClasses
             return profile;
         }
 
-        private static IWebDriver getFirefoxDriver()
+        private static RemoteWebDriver getFirefoxDriver()
         {
-            IWebDriver driver = new FirefoxDriver();
+            RemoteWebDriver driver = new FirefoxDriver();
             return driver;
         }
-        private static IWebDriver getChromeDriver()
+        private static RemoteWebDriver getChromeDriver()
         {
-            IWebDriver driver = new ChromeDriver(GetChromeOptions());
+            RemoteWebDriver driver = new ChromeDriver(GetChromeOptions());
             return driver;
         }
-        private static IWebDriver getIEDriver()
+        private static RemoteWebDriver getIEDriver()
         {
-            IWebDriver driver = new InternetExplorerDriver(GetIEOptions());
+            RemoteWebDriver driver = new InternetExplorerDriver(GetIEOptions());
             return driver;
         }
-        [AssemblyInitialize]
+    [AssemblyInitialize]
         public static void initWebDriver(TestContext tc)
         {
 
@@ -75,9 +77,9 @@ namespace Specflow.BaseClasses
                     throw new NoSuchDriverFound("Driver not found : " + ObjectRepository.config.GetBrowserType().ToString());
             }
             ObjectRepository.driver.Manage().Timeouts()
-                .PageLoad.Add(TimeSpan.FromSeconds(ObjectRepository.config.GetPageLoadTimeOut()));
+                .PageLoad = TimeSpan.FromSeconds(ObjectRepository.config.GetPageLoadTimeOut());
             ObjectRepository.driver.Manage().Timeouts()
-                .ImplicitWait.Add(TimeSpan.FromSeconds(ObjectRepository.config.GetElementLoadTimeOut()));
+                .ImplicitWait = TimeSpan.FromSeconds(ObjectRepository.config.GetElementLoadTimeOut());
 
             BrowserHelper.MaximizeBrowser();
         }

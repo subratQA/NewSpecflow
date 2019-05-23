@@ -14,16 +14,16 @@ namespace Specflow.Pages
     {
         private IWebDriver iDriver;
         #region Constructor
-            public PageClass_Home(IWebDriver driver) : base(driver)
+            public PageClass_Home(IWebDriver _driver) : base(_driver)
                 {
-                    this.iDriver = driver;
-                }
+                    this.iDriver = _driver;
+                }   
         #endregion
 
 
         #region WebElements
         [FindsBy(How =How.Id,Using = "ctl00_ContentMainMenu_ctl00_MenuRepeater_ctl00_lblMenu")]
-        private IWebElement HomeIcon;
+        public IWebElement homeIcon;
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ContentLeft_actions1_ActionsRepeater_ctl04_divLink']/a")]
         private IWebElement link_ImportStudy;
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ContentLeft_actions1_ActionsRepeater_ctl00_divLink']/a")]
@@ -37,7 +37,7 @@ namespace Specflow.Pages
         //private static By link_ImportStudy = By.XPath("//*[@id='ctl00_ContentLeft_actions1_ActionsRepeater_ctl04_divLink']/a");
 
         #endregion
-
+        public IWebElement HomeIcon { get { return homeIcon; } }
         public PageClass_EnterStudyDetail clickActionPalletLink(string linkname)
         {
             switch (linkname.ToUpper())

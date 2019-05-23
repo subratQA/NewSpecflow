@@ -103,6 +103,45 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create New Study")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "This feature is to create a new study in desginer application")]
+        public virtual void CreateNewStudy()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create New Study", null, ((string[])(null)));
+#line 7
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 8
+ testRunner.Given("I Click on Create New Study link from Action Pallet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Study Name",
+                        "Study Label",
+                        "Protocol",
+                        "Protocol Label",
+                        "Study Indication",
+                        "Therapeutic Area",
+                        "Client"});
+            table1.AddRow(new string[] {
+                        "Study1",
+                        "Study1",
+                        "Study1",
+                        "Study1",
+                        "Study1",
+                        "OTHER",
+                        "Study1"});
+#line 9
+ testRunner.And("I entered Study Name,Study Label,Protocol,Protocol Label,Study Indication,Therape" +
+                    "utic Area,Client", ((string)(null)), table1, "And ");
+#line 13
+ testRunner.And("I Clicked on Save Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+ testRunner.Then("I see the Study has been created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

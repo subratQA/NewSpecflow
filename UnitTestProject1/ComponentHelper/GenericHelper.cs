@@ -13,6 +13,7 @@ namespace Specflow.ComponentHelper
 {
     public class GenericHelper
     {
+        public IWebDriver iDriver;
         public static bool IsElementPresent(By Locator)
         {
             try { return ObjectRepository.driver.FindElements(Locator).Count == 1; }
@@ -112,6 +113,10 @@ namespace Specflow.ComponentHelper
                 return false;
             }
         }
-
+        public string getTitle
+        {
+            get { return iDriver.Title; }
+         }
+        
     }
 }

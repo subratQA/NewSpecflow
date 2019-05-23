@@ -1,5 +1,5 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
+using SeleniumExtras.PageObjects;
 using Specflow.ComponentHelper;
 using System;
 using System.Collections.Generic;
@@ -13,18 +13,28 @@ namespace Specflow.BaseClasses
     {
 
         public IWebDriver iDriver;
+        public PageBase(IWebDriver _driver)
+        {
+            PageFactory.InitElements(_driver, this);
+            this.iDriver = _driver;
+        }
 
         [FindsBy(How =How.Id,Using = "ctl00_ctl00_ucHeader_lnkLogout")]
         private IWebElement logoutlink;
 
-        public PageBase(IWebDriver driver)
-        {
-            PageFactory.InitElements(driver, this);
-        }
+        //IWebElement logoutlink => iDriver.FindElementById("ctl00_ctl00_ucHeader_lnkLogout");
+        //        private IWebElement logoutlink
+        //       {
+        //           get
+        //          {
+        //               return iDriver.FindElement(By.Id("ctl00_ctl00_ucHeader_lnkLogout"));
+        //           }
+        //       }
 
-        protected void logOutFromApplication()
+        public void logOutFromApplication()
         {
             if(GenericHelper.IsElementPresent(By.Id("ctl00_ctl00_ucHeader_lnkLogout")));
+            //if(GenericHelper.IsElementPresent(logoutlink))
             { logoutlink.Click(); }
         }
     }

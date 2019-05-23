@@ -13,8 +13,8 @@ using Specflow.ComponentHelper;
 namespace Specflow.Definations
 {
     [Binding]
-    [TestClass]
-     public class StepDef_CreateNewStudy
+
+     public sealed class StepDef_CreateNewStudy
     {
         private PageClass_Login lPage;
         private PageClass_Home hPage;
@@ -27,6 +27,7 @@ namespace Specflow.Definations
         public void GivenILoggedIntoDesignerApplication()
         {
             lPage = new PageClass_Login(ObjectRepository.driver);
+            //NavigationHelper.NavigateToURL(ObjectRepository.config.getUrl());
             lPage.loginToDesigner(ObjectRepository.config.getUserName(), ObjectRepository.config.getPassword());
         }
 
@@ -41,22 +42,16 @@ namespace Specflow.Definations
         {
 
         }
-        [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(int p0)
-        {
-            ScenarioContext.Current.Pending();
-        }
 
-
-
-        #endregion
+#endregion
 
         #region Then Block
 
         [Then(@"I see desginer home page")]
         public void ThenISeeDesginerHomePage()
         {
-            
+            hPage = new PageClass_Home(ObjectRepository.driver);
+            AssertHelper.IsElementPresent(hPage.homeIcon);
         }
 
         [Then(@"I see study has been created successfully")]
