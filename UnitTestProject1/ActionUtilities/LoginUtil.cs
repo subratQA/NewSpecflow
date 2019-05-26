@@ -26,7 +26,7 @@ namespace Specflow.ActionUtilities
             return true;
         }
 
-        public static void ScrollIntoView(By webElement)
+        public static void ScrollIntoView(IWebElement webElement)
         {
             ((IJavaScriptExecutor)ObjectRepository.driver).ExecuteScript("arguments[0].scrollIntoView(false);", webElement);
         }

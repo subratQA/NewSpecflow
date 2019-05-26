@@ -88,11 +88,11 @@ namespace Specflow.Features
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Login into Desginer")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("01_Login into Desginer")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "This feature is to create a new study in desginer application")]
-        public virtual void LoginIntoDesginer()
+        public virtual void _01_LoginIntoDesginer()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login into Desginer", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01_Login into Desginer", null, ((string[])(null)));
 #line 3
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -105,16 +105,16 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Create New Study")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("02_Create New Study")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "This feature is to create a new study in desginer application")]
-        public virtual void CreateNewStudy()
+        public virtual void _02_CreateNewStudy()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Create New Study", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02_Create New Study", null, ((string[])(null)));
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 8
- testRunner.Given("I Click on Create New Study link from Action Pallet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I Click on \"Create New Study\" link from Action Pallet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Study Name",
@@ -123,7 +123,8 @@ this.ScenarioInitialize(scenarioInfo);
                         "Protocol Label",
                         "Study Indication",
                         "Therapeutic Area",
-                        "Client"});
+                        "Client",
+                        "Target App"});
             table1.AddRow(new string[] {
                         "Study1",
                         "Study1",
@@ -131,7 +132,8 @@ this.ScenarioInitialize(scenarioInfo);
                         "Study1",
                         "Study1",
                         "OTHER",
-                        "Study1"});
+                        "Study1",
+                        "DataLabs 5.6x or greater"});
 #line 9
  testRunner.And("I entered Study Name,Study Label,Protocol,Protocol Label,Study Indication,Therape" +
                     "utic Area,Client", ((string)(null)), table1, "And ");

@@ -25,7 +25,7 @@ namespace Specflow.ComponentHelper
             {
                 if (Locator != null)
                 {
-                    LoginUtil.ScrollIntoView(Locator);
+                   // LoginUtil.ScrollIntoView(Locator);
                     ObjectRepository.webelement = GenericHelper.GetElement(Locator);
                     ObjectRepository.webelement.SendKeys(text);
                     isTextEntered = true;
@@ -43,6 +43,24 @@ namespace Specflow.ComponentHelper
 
         }
 
+        public static bool SetText(IWebElement element, string text)
+        {
+            bool isTextEntered = false;
+            try
+            {
+                if (element.GetProperty("class") != null)
+                {
+                    LoginUtil.ScrollIntoView(element);
+                    element.SendKeys(text);
+                    isTextEntered = true;
+                }
+            }
+            catch (Exception e)
+            {
+                // LogException("Failed to set text to textbox", e.ToString(), logMessageOnException);
+            }
+            return isTextEntered;
+        }
 
         public static void ClearTextFromTextBox(By Locator)
         {
@@ -52,7 +70,7 @@ namespace Specflow.ComponentHelper
             {
                 if (Locator != null)
                 {
-                    LoginUtil.ScrollIntoView(Locator);
+                    //LoginUtil.ScrollIntoView(Locator);
                     ObjectRepository.webelement = GenericHelper.GetElement(Locator);
                     ObjectRepository.webelement.Clear();
                 }

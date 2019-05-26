@@ -12,7 +12,7 @@ namespace Specflow.Pages
 {
     public class PageClass_Home:PageBase
     {
-        private IWebDriver iDriver;
+        public IWebDriver iDriver;
         #region Constructor
             public PageClass_Home(IWebDriver _driver) : base(_driver)
                 {
@@ -25,11 +25,14 @@ namespace Specflow.Pages
         [FindsBy(How =How.Id,Using = "ctl00_ContentMainMenu_ctl00_MenuRepeater_ctl00_lblMenu")]
         public IWebElement homeIcon;
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ContentLeft_actions1_ActionsRepeater_ctl04_divLink']/a")]
-        private IWebElement link_ImportStudy;
+        [CacheLookup]
+        public IWebElement link_ImportStudy;
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ContentLeft_actions1_ActionsRepeater_ctl00_divLink']/a")]
-        private IWebElement link_CreateNewStudy;
+        [CacheLookup]
+        public IWebElement link_CreateNewStudy;
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ContentLeft_actions1_ActionsRepeater_ctl02_divLink']/a")]
-        private IWebElement link_createstudyfromexist;
+        [CacheLookup]
+        public IWebElement link_createstudyfromexist;
 
         //private static By HomeIcon = By.Id("Home");
         //private static By link_CreateNewStudy = By.XPath("//*[@id='ctl00_ContentLeft_actions1_ActionsRepeater_ctl00_divLink']/a");
@@ -38,19 +41,22 @@ namespace Specflow.Pages
 
         #endregion
         public IWebElement HomeIcon { get { return homeIcon; } }
+        public IWebElement LinkImportStudy { get { return link_ImportStudy; } }
+        public IWebElement LinkCreateNewStudy { get { return link_CreateNewStudy; } }
+        public IWebElement LinkCreateStudyFrom { get { return link_createstudyfromexist; } }
         public PageClass_EnterStudyDetail clickActionPalletLink(string linkname)
         {
             switch (linkname.ToUpper())
             {
                 case "CREATE NEW STUDY":
-                    link_CreateNewStudy.Click();
+                    LinkCreateNewStudy.Click();
                     break;
 
                 case "IMPORT STUDY":
-                    link_ImportStudy.Click();
+                    LinkImportStudy.Click();
                     break;
                 case "CREATE STUDY FROM EXISTING":
-                    link_createstudyfromexist.Click();
+                    LinkCreateStudyFrom.Click();
                     break;
                 default:
                     throw new Exception("Invalid Action pallet link :" + linkname);

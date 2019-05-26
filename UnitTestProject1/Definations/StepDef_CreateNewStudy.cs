@@ -26,9 +26,8 @@ namespace Specflow.Definations
         [Given(@"I Logged into Designer application")]
         public void GivenILoggedIntoDesignerApplication()
         {
-            lPage = new PageClass_Login(ObjectRepository.driver);
-            //NavigationHelper.NavigateToURL(ObjectRepository.config.getUrl());
-            lPage.loginToDesigner(ObjectRepository.config.getUserName(), ObjectRepository.config.getPassword());
+           lPage = new PageClass_Login(ObjectRepository.driver);
+           hPage = lPage.loginToDesigner(ObjectRepository.config.getUserName(), ObjectRepository.config.getPassword());
         }
 
         [Given(@"I Logged into Designer application in the instance ""(.*)""")]
@@ -42,16 +41,40 @@ namespace Specflow.Definations
         {
 
         }
+        [Given(@"I Click on ""(.*)"" link from Action Pallet")]
+        public void GivenIClickOnLinkFromActionPallet(string link)
+        {
+           // ObjectRepository.hPage = new PageClass_Home(ObjectRepository.driver);
+            etPage= hPage.clickActionPalletLink(link);
+        }
 
-#endregion
+        #endregion
+
+        #region And Block
+
+        [Given(@"I entered Study Name,Study Label,Protocol,Protocol Label,Study Indication,Therapeutic Area,Client")]
+        public void GivenIEnteredStudyNameStudyLabelProtocolProtocolLabelStudyIndicationTherapeuticAreaClient(Table table)
+        {
+            //etPage = new PageClass_EnterStudyDetail(ObjectRepository.driver);
+            foreach (var row in table.Rows)
+            {
+                ObjectRepository.etPage.CreateNewStudy(row["Study Name"],row["Study Label"],row["Protocol"],row["Protocol Label"],row["Study Indication"],row["Therapeutic Area"],row["Client"],row["Target App"]);
+            }
+            
+                
+        }
+
+        #endregion
 
         #region Then Block
 
         [Then(@"I see desginer home page")]
         public void ThenISeeDesginerHomePage()
         {
-            hPage = new PageClass_Home(ObjectRepository.driver);
-            AssertHelper.IsElementPresent(hPage.homeIcon);
+            // hPage = new PageClass_Home(ObjectRepository.driver);
+            //  AssertHelper.IsElementPresent(hPage.homeIcon);
+            Console.WriteLine("Home Page");
+
         }
 
         [Then(@"I see study has been created successfully")]
