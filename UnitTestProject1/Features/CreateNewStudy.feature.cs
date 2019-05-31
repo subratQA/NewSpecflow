@@ -124,7 +124,8 @@ this.ScenarioInitialize(scenarioInfo);
                         "Study Indication",
                         "Therapeutic Area",
                         "Client",
-                        "Target App"});
+                        "Target App",
+                        "Labs"});
             table1.AddRow(new string[] {
                         "Study1",
                         "Study1",
@@ -132,15 +133,31 @@ this.ScenarioInitialize(scenarioInfo);
                         "Study1",
                         "Study1",
                         "OTHER",
-                        "Study1",
-                        "DataLabs 5.6x or greater"});
+                        "Sponsor1",
+                        "DataLabs 5.8x or greater",
+                        "Yes"});
 #line 9
  testRunner.And("I entered Study Name,Study Label,Protocol,Protocol Label,Study Indication,Therape" +
-                    "utic Area,Client", ((string)(null)), table1, "And ");
+                    "utic Area,Client and Clicked on Save Button", ((string)(null)), table1, "And ");
 #line 13
- testRunner.And("I Clicked on Save Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
- testRunner.Then("I see the Study has been created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see study has been created successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03_Verify Labs tab components fields \"Attribute Mapping\" and \"Lab Mapping\"")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "This feature is to create a new study in desginer application")]
+        public virtual void _03_VerifyLabsTabComponentsFieldsAttributeMappingAndLabMapping()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03_Verify Labs tab components fields \"Attribute Mapping\" and \"Lab Mapping\"", null, ((string[])(null)));
+#line 15
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 17
+ testRunner.And("I click on \"Labs\" Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
+ testRunner.Then("I Verify the subtabs Attribute Mappings and Lab Mappings displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
-using OpenQA.Selenium.Support.PageObjects;
+using SeleniumExtras.PageObjects;
 using Specflow.BaseClasses;
 using Specflow.ComponentHelper;
 using System;
@@ -14,26 +14,27 @@ namespace Specflow.Pages
 {
     public class PageClass_StudySave:PageBase
     {
-        private IWebDriver iDriver;
+        private IWebDriver driver;
 
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ctl00_ContentLeft_ContentLeft_Actions1_ActionsRepeater_ctl00_divLink']/a")]
-        private IWebElement ViewStudyJobs;
+        public IWebElement ViewStudyJobs;
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ctl00_ContentLeft_ContentLeft_Actions1_ActionsRepeater_ctl02_divLink']/a")]
-        private IWebElement VerifyStudy;
+        public IWebElement VerifyStudy;
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ctl00_ContentLeft_ContentLeft_Actions1_ActionsRepeater_ctl04_divLink']/a")]
-        private IWebElement PublishStudy;
+        public IWebElement PublishStudy;
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ctl00_ContentLeft_ContentLeft_Actions1_ActionsRepeater_ctl06_divLink']/a")]
-        private IWebElement StudyLabelEditCheck;
+        public IWebElement StudyLabelEditCheck;
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ctl00_ContentLeft_ContentLeft_Actions2_DocumentLinksRepeater_ctl00_divDocLink']/a")]
-        private IWebElement ConfigureFileName;
+        public IWebElement ConfigureFileName;
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ctl00_ContentLeft_ContentLeft_Actions2_DocumentLinksRepeater_ctl02_divDocLink']/a")]
-        private IWebElement SDS;
+        public IWebElement SDS;
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ctl00_ContentLeft_ContentLeft_Actions2_DocumentLinksRepeater_ctl04_divDocLink']/a")]
-        private IWebElement ECD;
+        public IWebElement ECD;
 
         public PageClass_StudySave(IWebDriver _driver) : base(_driver)
         {
-            this.iDriver = _driver;
+            this.driver = _driver;
+            PageFactory.InitElements(_driver, this);
         }
         #region ActionUtilities
         public void ClickLinkFromActionPallet(string linkname)

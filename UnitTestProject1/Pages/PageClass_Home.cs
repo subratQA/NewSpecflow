@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.PageObjects;
+//using OpenQA.Selenium.Support.PageObjects;
+using SeleniumExtras.PageObjects;
 using Specflow.BaseClasses;
 using Specflow.ComponentHelper;
 using System;
@@ -12,19 +13,19 @@ namespace Specflow.Pages
 {
     public class PageClass_Home:PageBase
     {
-        public IWebDriver iDriver;
+        public IWebDriver driver;
         #region Constructor
-            public PageClass_Home(IWebDriver _driver) : base(_driver)
-                {
-                    this.iDriver = _driver;
-                }   
+        public PageClass_Home(IWebDriver _driver) : base(_driver)
+        {           
+            this.driver = _driver;
+            PageFactory.InitElements(_driver, this);
+        }
         #endregion
-
 
         #region WebElements
         [FindsBy(How =How.Id,Using = "ctl00_ContentMainMenu_ctl00_MenuRepeater_ctl00_lblMenu")]
         public IWebElement homeIcon;
-        [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ContentLeft_actions1_ActionsRepeater_ctl04_divLink']/a")]
+        [SeleniumExtras.PageObjects.FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ContentLeft_actions1_ActionsRepeater_ctl04_divLink']/a")]
         [CacheLookup]
         public IWebElement link_ImportStudy;
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ContentLeft_actions1_ActionsRepeater_ctl00_divLink']/a")]
@@ -62,12 +63,13 @@ namespace Specflow.Pages
                     throw new Exception("Invalid Action pallet link :" + linkname);
                     break;
             }
-            return new PageClass_EnterStudyDetail(iDriver);
+            return new PageClass_EnterStudyDetail(driver);
         }
 
         public static bool IsUserInHomePage()
         {
             return true;
+            
         }
     }
 }

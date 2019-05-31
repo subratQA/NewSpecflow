@@ -15,7 +15,7 @@ namespace Specflow.Pages
 {
     public class PageClass_Login:PageBase
     {
-        public IWebDriver iDriver;//ObjectRepository.driver;
+        public IWebDriver driver;//ObjectRepository.driver;
         #region WebElements
         // private IWebElement userNamefield = GenericHelper.GetElement(By.Id("Login_ContentBody_txtUsername"));
         //  private IWebElement passwordfield = GenericHelper.GetElement(By.Id("Login_ContentBody_txtPassword"));
@@ -43,7 +43,8 @@ namespace Specflow.Pages
         public PageClass_Login(IWebDriver _driver) :base(_driver) //calling the constructor of parent class
         {
             //PageFactory.InitElements(ObjectRepository.driver, this);
-            this.iDriver = _driver;
+            this.driver = _driver;
+            PageFactory.InitElements(driver, this);
         }
 
         #endregion
@@ -78,7 +79,7 @@ namespace Specflow.Pages
                 Thread.Sleep(250);
                  passwrd.SendKeys(pwd);
                 lgnBttn.Click();
-                return new PageClass_Home(iDriver);
+                return new PageClass_Home(driver);
             }
 
         }

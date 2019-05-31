@@ -49,6 +49,10 @@
       <HintPath>..\packages\Gherkin.6.0.0\lib\net45\Gherkin.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
@@ -119,7 +123,7 @@
     <Compile Include="Configuration\AppConfigReader.cs" />
     <Compile Include="Configuration\BrowserType.cs" />
     <Compile Include="CustomException\NoSuchDriverFound.cs" />
-    <Compile Include="Definations\StepDef_CreateNewStudy.cs" />
+    <Compile Include="Definations\StepDef_CreateNewStudyAndVerifyLabsFields.cs" />
     <Compile Include="Features\CreateNewStudy.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,6 +131,7 @@
     </Compile>
     <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="Pages\PageClass_EnterStudyDetail.cs" />
+    <Compile Include="Pages\PageClass_LabMappings.cs" />
     <Compile Include="Pages\PageClass_Login.cs" />
     <Compile Include="Pages\PageClass_Home.cs" />
     <Compile Include="Pages\PageClass_StudySave.cs" />

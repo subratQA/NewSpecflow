@@ -32,7 +32,8 @@ namespace Specflow.ComponentHelper
         public static void SelectListItemByname(IWebElement Locator, string item)
         {
             SelectElement select = new SelectElement(Locator);
-            select.SelectByValue(item);
+            //select.SelectByValue(item);
+            select.SelectByText(item);
         }
     }
 }
