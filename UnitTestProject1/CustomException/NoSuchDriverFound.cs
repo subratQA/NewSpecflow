@@ -10,7 +10,7 @@ namespace Specflow.CustomException
     {
         public NoSuchDriverFound(String msg) : base(msg)
         {
-
+            Console.WriteLine("No Such Driver Exist");
         }
     }
 }
