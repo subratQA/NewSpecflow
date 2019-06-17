@@ -14,5 +14,7 @@ namespace Specflow.Settings
         public const string Url = "url";
         public const string PageLoadTimeOut = "pageloadtimeout";
         public const string ElementLoadTimeOut = "elementloadtimeout";
+        public const string ApplicationVersion = "applicationversion";
+        public const string Environment = "environment";
     }
 }

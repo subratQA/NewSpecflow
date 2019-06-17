@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using log4net;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 //using OpenQA.Selenium.Support.PageObjects;
 using SeleniumExtras.PageObjects;
@@ -16,6 +17,7 @@ namespace Specflow.Pages
    public class PageClass_EnterStudyDetail:PageBase
     {
         private IWebDriver driver;
+        private static readonly ILog logs = LoggerHelper.GetLogger(typeof(PageClass_EnterStudyDetail));
 
         [FindsBy(How = How.Id, Using = "ctl00_ctl00_ContentBody_ContentBody_txtStudyName")]
         private IWebElement studyName;
@@ -52,22 +54,33 @@ namespace Specflow.Pages
 
         public PageClass_StudySave CreateNewStudy(string studyname, string studylabel, string protocol, string protcollabel, string studyIndi, string therap, string client, string target,string labs)
         {
-            studyName.Clear();
-            studyName.SendKeys(studyname);
-            studyLabel.Clear();
-            studyLabel.SendKeys(studylabel);
-            Protocol.Clear();
-            Protocol.SendKeys(protocol);
-            protcolLabel.Clear();
-            protcolLabel.SendKeys(protcollabel);
-            studyIndication.Clear();
-            studyIndication.SendKeys(studyIndi);
-            DropDownListHelper.SelectListItemByname(theraputic, therap);
-            Thread.Sleep(1000);
-            DropDownListHelper.SelectListItemByname(clientsponsor, client);
-            DropDownListHelper.SelectListItemByname(targetApp, target);
-            DropDownListHelper.SelectListItemByname(labsfield, labs);
-            savebtn.Click();
+            try
+            {
+                studyName.Clear();
+                studyName.SendKeys(studyname);
+                studyLabel.Clear();
+                studyLabel.SendKeys(studylabel);
+                Protocol.Clear();
+                Protocol.SendKeys(protocol);
+                protcolLabel.Clear();
+                protcolLabel.SendKeys(protcollabel);
+                studyIndication.Clear();
+                studyIndication.SendKeys(studyIndi);
+                DropDownListHelper.SelectListItemByname(theraputic, therap);
+                Thread.Sleep(1000);
+                DropDownListHelper.SelectListItemByname(clientsponsor, client);
+                DropDownListHelper.SelectListItemByname(targetApp, target);
+                DropDownListHelper.SelectListItemByname(labsfield, labs);
+                savebtn.Click();
+                logs.Info("Study Created");
+            }
+            catch (Exception e)
+            {
+                logs.Error(e.StackTrace);
+                GenericHelper.TakeScreenshotForMePlease();
+                throw;
+            }
+           
             return new PageClass_StudySave(driver);
         }
 

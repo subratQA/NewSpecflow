@@ -10,15 +10,24 @@ using Specflow.CustomException;
 using Specflow.Settings;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TechTalk.SpecFlow;
 
 namespace Specflow.BaseClasses
 {
     [TestClass]
     public class BaseClass
     {
+        [BeforeFeature]
+        public static void BeforeFeature()
+        {
+            
+            LoggerHelper.GetLogger(typeof(PageBase));
+        }
         private static ChromeOptions GetChromeOptions()
         {
             ChromeOptions option = new ChromeOptions();
@@ -56,10 +65,11 @@ namespace Specflow.BaseClasses
             RemoteWebDriver driver = new InternetExplorerDriver(GetIEOptions());
             return driver;
         }
+
     [AssemblyInitialize]
         public static void initWebDriver(TestContext tc)
         {
-
+            KillProcesses();
             ObjectRepository.config = new AppConfigReader();
 
             switch (ObjectRepository.config.GetBrowserType())
@@ -81,7 +91,23 @@ namespace Specflow.BaseClasses
             ObjectRepository.driver.Manage().Timeouts()
                 .ImplicitWait = TimeSpan.FromSeconds(ObjectRepository.config.GetElementLoadTimeOut());
 
-            BrowserHelper.MaximizeBrowser();
+            //BrowserHelper.MaximizeBrowser();
+        }
+        
+
+        static void KillProcesses()
+        {
+            try
+            {
+                var processes = Process.GetProcessesByName("WINWORD");
+                foreach (var process in processes)
+                {
+                    process.Kill();
+                }
+            }
+            catch (Exception e)
+            {
+            }
         }
         [AssemblyCleanup]
         public static void tearDown()

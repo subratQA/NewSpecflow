@@ -112,12 +112,14 @@
     <Compile Include="ActionUtilities\ControlUtilities.cs" />
     <Compile Include="ActionUtilities\LoginUtil.cs" />
     <Compile Include="BaseClasses\BaseClass.cs" />
+    <Compile Include="BaseClasses\BaseFolderCreationClass.cs" />
     <Compile Include="BaseClasses\PageBase.cs" />
     <Compile Include="ComponentHelper\AssertHelper.cs" />
     <Compile Include="ComponentHelper\BrowserHelper.cs" />
     <Compile Include="ComponentHelper\ButtonHelper.cs" />
     <Compile Include="ComponentHelper\DropDownListHelper.cs" />
     <Compile Include="ComponentHelper\GenericHelper.cs" />
+    <Compile Include="ComponentHelper\LoggerHelper.cs" />
     <Compile Include="ComponentHelper\NavigationHelper.cs" />
     <Compile Include="ComponentHelper\TextBoxHelper.cs" />
     <Compile Include="ComponentHelper\WebTableHelper.cs" />
@@ -125,6 +127,12 @@
     <Compile Include="Configuration\BrowserType.cs" />
     <Compile Include="CustomException\NoSuchDriverFound.cs" />
     <Compile Include="Definations\StepDef_CreateNewStudyAndVerifyLabsFields.cs" />
+    <Compile Include="Definations\StepDef_SelectStudy.cs" />
+    <Compile Include="Features\SelectStudyAndCreateDomain.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SelectStudyAndCreateDomain.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\CreateNewStudy.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -132,6 +140,7 @@
     </Compile>
     <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="Pages\PageClass_EnterStudyDetail.cs" />
+    <Compile Include="Pages\PageClass_Forms.cs" />
     <Compile Include="Pages\PageClass_LabMappings.cs" />
     <Compile Include="Pages\PageClass_Login.cs" />
     <Compile Include="Pages\PageClass_Home.cs" />
@@ -143,6 +152,10 @@
   <ItemGroup>
     <None Include="Default.srprofile">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Features\SelectStudyAndCreateDomain.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SelectStudyAndCreateDomain.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\CreateNewStudy.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

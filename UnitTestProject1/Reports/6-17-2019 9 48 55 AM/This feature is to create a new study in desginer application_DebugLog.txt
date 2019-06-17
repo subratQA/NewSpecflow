@@ -1,0 +1,35 @@
+ 17-Jun-2019-09:48:58 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : http://10.228.10.73/DS_US63129_LabsEandD/Home.aspx
+ 17-Jun-2019-09:48:59 [Specflow.Pages.PageClass_Login][INFO][loginToDesigner]- Text Set: testadmin
+ 17-Jun-2019-09:48:59 [Specflow.Pages.PageClass_Login][INFO][loginToDesigner]- Text Set: Datalabs1234
+ 17-Jun-2019-09:49:04 [Specflow.Pages.PageClass_Login][INFO][loginToDesigner]- Clicked on login button
+ 17-Jun-2019-09:49:04 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[@id='ctl00_ContentBody_ctl00_grdHome_ctl00']/tbody/tr[1]/td[2]
+ 17-Jun-2019-09:49:04 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[@id='ctl00_ContentBody_ctl00_grdHome_ctl00']/tbody/tr[1]/td[2]
+ 17-Jun-2019-09:49:04 [Specflow.ComponentHelper.WebTableHelper][INFO][GetColumnValues]- Returned column value: Study1
+ 17-Jun-2019-09:49:04 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[@id='ctl00_ContentBody_ctl00_grdHome_ctl00']/tbody/tr[1]/td[1]
+ 17-Jun-2019-09:49:04 [Specflow.ComponentHelper.WebTableHelper][INFO][GetColumnValues]- Returned column value: Sponsor1
+ 17-Jun-2019-09:49:04 [Specflow.ComponentHelper.WebTableHelper][INFO][GetRowByStudyNameAndProtcol]- Row number located: 1
+ 17-Jun-2019-09:49:04 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[@id='ctl00_ContentBody_ctl00_grdHome_ctl00']/tbody/tr[1]/td[2]
+ 17-Jun-2019-09:49:06 [Specflow.ComponentHelper.WebTableHelper][INFO][ClickButtonInColInTable]- Clicked on locator: //table[@id='ctl00_ContentBody_ctl00_grdHome_ctl00']
+ 17-Jun-2019-09:49:06 [Specflow.Pages.PageClass_Home][INFO][SelectStudy]- Pass: Clicked on the study : Study1 having protcol:Sponsor1
+ 17-Jun-2019-09:49:07 [Specflow.BaseClasses.PageBase][INFO][clickHeaderTabs]- Clicked Forms Tab
+ 17-Jun-2019-09:49:07 [Specflow.Pages.PageClass_Forms][INFO][ClickHeaderLinksInFormsPage]- Clicked on Add form link
+ 17-Jun-2019-09:49:08 [Specflow.Pages.PageClass_Forms][INFO][SetTextInFormsTableEditBoxes]- Form Name text entered : NewForm1
+ 17-Jun-2019-09:49:09 [Specflow.Pages.PageClass_Forms][INFO][SetTextInFormsTableEditBoxes]- Form Label text entered : NewFormLabel1
+ 17-Jun-2019-09:49:09 [Specflow.Pages.PageClass_Forms][INFO][ClickIconsInFormPage]- Clicked on Save icon
+ 17-Jun-2019-09:49:09 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[1]
+ 17-Jun-2019-09:49:09 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[1]
+ 17-Jun-2019-09:49:09 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[1]
+ 17-Jun-2019-09:49:09 [Specflow.ComponentHelper.WebTableHelper][INFO][GetColumnValues]- Returned column value: 
+ 17-Jun-2019-09:49:09 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[2]
+ 17-Jun-2019-09:49:09 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[2]
+ 17-Jun-2019-09:49:09 [Specflow.ComponentHelper.WebTableHelper][INFO][GetColumnValues]- Returned column value: aa
+ 17-Jun-2019-09:49:09 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[3]
+ 17-Jun-2019-09:49:09 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[3]
+ 17-Jun-2019-09:49:09 [Specflow.Pages.PageClass_Forms][ERROR][VerifyFormNameExistInTable]-    at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.get_Text()
+   at Specflow.ComponentHelper.WebTableHelper.GetColumnValues(String locator, Int32 row, Int32 col) in C:\Users\sarkars2\Documents\Personal\Selenium Udemy\BDD Specflow\UnitTestProject1\UnitTestProject1\ComponentHelper\WebTableHelper.cs:line 43
+   at Specflow.ComponentHelper.WebTableHelper.GetAllValuesInTable(String locator) in C:\Users\sarkars2\Documents\Personal\Selenium Udemy\BDD Specflow\UnitTestProject1\UnitTestProject1\ComponentHelper\WebTableHelper.cs:line 65
+   at Specflow.Pages.PageClass_Forms.VerifyFormNameExistInTable(String formname) in C:\Users\sarkars2\Documents\Personal\Selenium Udemy\BDD Specflow\UnitTestProject1\UnitTestProject1\Pages\PageClass_Forms.cs:line 162
+ 17-Jun-2019-09:49:09 [Specflow.ComponentHelper.GenericHelper][INFO][TakeScreenshotForMePlease]- Screenshot name is: Screen2019-06-17-19-09.jpeg

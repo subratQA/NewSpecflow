@@ -13,6 +13,8 @@ namespace Specflow.Interfaces
         string getUserName();
         string getPassword();
         string getUrl();
+        double getApplicationVersion();
+        string getEnvironment();
         int GetPageLoadTimeOut();
         int GetElementLoadTimeOut();
 

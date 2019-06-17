@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using log4net;
+using OpenQA.Selenium;
 using Specflow.Settings;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,11 @@ namespace Specflow.ComponentHelper
 {
    public class WebTableHelper
     {
+        private static readonly ILog logs = LoggerHelper.GetLogger(typeof(WebTableHelper));
         internal static string GetTableXpath(string locator, int row, int col)
         {
-            return $"{locator}//tbody//tr[{row}]//td[{col}]";
+            logs.Info("Returned webtable: "+ $"{locator}/tbody/tr[{row}]/td[{col}]");
+            return $"{locator}/tbody/tr[{row}]/td[{col}]";
         }
         private static IWebElement GetGridElement(string locator, int row, int col)
         {
@@ -37,7 +40,8 @@ namespace Specflow.ComponentHelper
 
            if (GenericHelper.IsElementPresent(By.XPath(columnxPath)))
             {
-                colValue = ObjectRepository.driver.FindElement(By.XPath(locator)).Text;
+                colValue = ObjectRepository.driver.FindElement(By.XPath(columnxPath)).Text;
+                logs.Info("Returned column value: " + colValue);
             }
             return colValue;
         }
@@ -67,9 +71,52 @@ namespace Specflow.ComponentHelper
             return list;
         }
 
-        public static void ClickButtonInColInTable(string locator, int row, int col)
+        public static bool ClickButtonInColInTable(string locator, int row, int col)
         {
-            GetGridElement(locator,row,col).Click();
+            IWebElement ele = GetGridElement(locator, row, col);
+            if(!ele.Enabled && ele.TagName != "a")
+            {
+                return false;
+            }
+            ele.Click();
+            logs.Info("Clicked on locator: " + locator);
+            return true;
         }
+
+        public static int GetRowByStudyNameAndProtcol(string locator, string RowText, string protcol)
+        {
+            var row = 1;
+            int finalrow = 0;
+
+            while (GenericHelper.IsElementPresent(By.XPath(GetTableXpath(locator, row, 2))))
+            {
+                string colstudyText = GetColumnValues(locator, row, 2);
+                if (colstudyText == RowText)
+                {
+                    finalrow = row;
+                    string actProtocolText = GetColumnValues(locator, finalrow, 1);
+                    if (actProtocolText.Equals(protcol))
+                    {
+                        logs.Info("Row number located: " + finalrow);
+                        break;
+                    }
+                    row = finalrow;                        
+                }
+                row++;
+            }  
+            return finalrow;
+        }
+
+        //public static bool FindMatchingProtoclAgainstStudy(string locator, string study, string protocl)
+        //{
+        //    bool matchfound = false;
+        //    int studyrow = GetRowByStudyText(locator, study);
+        //    int protocolrow = GetRowByStudyText(locator, protocl);
+        //    if (studyrow.Equals(protocl))
+        //    {
+        //        matchfound = true;
+        //    }
+        //    return matchfound;
+        //}
     }
 }

@@ -49,5 +49,20 @@ namespace Specflow.Configuration
                 return 30;
             return Convert.ToInt32(timeout);
         }
+
+        public double getApplicationVersion()
+        {
+            string version = ConfigurationManager.AppSettings.Get(AppConfigKeys.ApplicationVersion);
+            if (version == null)
+            {
+                return Convert.ToDouble(version);
+            }
+            return Convert.ToDouble(version);
+        }
+
+        public string getEnvironment()
+        {
+            return ConfigurationManager.AppSettings.Get(AppConfigKeys.Environment);
+        }
     }
 }

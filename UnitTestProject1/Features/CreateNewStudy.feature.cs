@@ -107,13 +107,15 @@ this.ScenarioInitialize(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("02_Create New Study")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "This feature is to create a new study in desginer application")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.IgnoreAttribute()]
         public virtual void _02_CreateNewStudy()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02_Create New Study", null, ((string[])(null)));
-#line 7
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02_Create New Study", null, new string[] {
+                        "Ignore"});
+#line 8
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 8
+#line 9
  testRunner.Given("I Click on \"Create New Study\" link from Action Pallet", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
@@ -136,28 +138,38 @@ this.ScenarioInitialize(scenarioInfo);
                         "Sponsor1",
                         "DataLabs 5.8x or greater",
                         "Yes"});
-#line 9
+#line 10
  testRunner.And("I entered Study Name,Study Label,Protocol,Protocol Label,Study Indication,Therape" +
                     "utic Area,Client and Clicked on Save Button", ((string)(null)), table1, "And ");
-#line 13
+#line 14
  testRunner.Then("I see study has been created successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03_Verify Labs tab components fields \"Attribute Mapping\" and \"Lab Mapping\"")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03_Add a New Form")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "This feature is to create a new study in desginer application")]
-        public virtual void _03_VerifyLabsTabComponentsFieldsAttributeMappingAndLabMapping()
+        public virtual void _03_AddANewForm()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03_Verify Labs tab components fields \"Attribute Mapping\" and \"Lab Mapping\"", null, ((string[])(null)));
-#line 15
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03_Add a New Form", null, ((string[])(null)));
+#line 26
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 17
- testRunner.And("I click on \"Labs\" Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 18
- testRunner.Then("I Verify the subtabs Attribute Mappings and Lab Mappings displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 27
+ testRunner.Given("I Selected Study \"Study1\" having Sponsor/Client \"Sponsor1\" from Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 28
+ testRunner.And("I click on \"Forms\" Tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
+ testRunner.And("I click on \"Add Form\" link in Forms page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 30
+ testRunner.And("I entered \"Form Name\" as \"NewForm1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+ testRunner.And("I entered \"Form Label\" as \"NewFormLabel1\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 32
+ testRunner.And("I clicked on \"Save\" Icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+ testRunner.Then("I see form \"NewForm1\" in the table created", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

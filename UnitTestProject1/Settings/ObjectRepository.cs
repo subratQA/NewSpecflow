@@ -19,6 +19,8 @@ namespace Specflow.Settings
         public static PageClass_Home hPage;
         public static PageClass_StudySave stPage;
         public static PageClass_EnterStudyDetail etPage;
+        public static PageClass_LabMappings labPage;
+        public static PageClass_Forms fPage;
 
     }
 }

@@ -14,21 +14,21 @@ namespace Specflow.Definations
 {
     [Binding]
 
-     public sealed class StepDef_CreateNewStudyAndVerifyLabsFields
+     public class StepDef_CreateNewStudyAndVerifyLabsFields
     {
-        private PageClass_Login lPage;
-        private PageClass_Home hPage;
-        private PageClass_StudySave stPage;
-        private PageClass_EnterStudyDetail etPage;
-        private PageClass_LabMappings labPage;
+        public PageClass_Login lPage;
+        public PageClass_Home hPage;
+        public PageClass_StudySave stPage;
+        public PageClass_EnterStudyDetail etPage;
+        public PageClass_LabMappings labPage;
 
         #region Given Block
 
         [Given(@"I Logged into Designer application")]
         public void GivenILoggedIntoDesignerApplication()
         {
-           lPage = new PageClass_Login(ObjectRepository.driver);
-           hPage = lPage.loginToDesigner(ObjectRepository.config.getUserName(), ObjectRepository.config.getPassword());
+            lPage = new PageClass_Login(ObjectRepository.driver);
+          ObjectRepository.hPage = lPage.loginToDesigner(ObjectRepository.config.getUserName(), ObjectRepository.config.getPassword());
         }
 
         [Given(@"I Logged into Designer application in the instance ""(.*)""")]
@@ -48,7 +48,7 @@ namespace Specflow.Definations
             //PageClass_EnterStudyDetail page = new PageClass_EnterStudyDetail(driver);
             // etPage = hPage.clickActionPalletLink(link);
             hPage = new PageClass_Home(ObjectRepository.driver);
-            etPage = hPage.clickActionPalletLink(link);
+            ObjectRepository.etPage = ObjectRepository.hPage.clickActionPalletLink(link);
         }
 
         [Given(@"I Click on the ""(.*)"" study having protocol ""(.*)""")]
@@ -60,7 +60,8 @@ namespace Specflow.Definations
         [Given(@"I click on ""(.*)"" Tab")]
         public void GivenIClickOnTab(string tabName)
         {
-            labPage = etPage.clickHeaderTabs("Labs");
+            etPage = new PageClass_EnterStudyDetail(ObjectRepository.driver);
+            ObjectRepository.labPage = ObjectRepository.etPage.clickHeaderTabs(tabName);
         }
 
 
@@ -76,7 +77,7 @@ namespace Specflow.Definations
             //etPage = new PageClass_EnterStudyDetail(ObjectRepository.driver);
             foreach (var row in table.Rows)
             {
-                stPage = etPage.CreateNewStudy(row["Study Name"],row["Study Label"],row["Protocol"],row["Protocol Label"],row["Study Indication"],row["Therapeutic Area"],row["Client"],row["Target App"],row["Labs"]);
+                ObjectRepository.stPage = ObjectRepository.etPage.CreateNewStudy(row["Study Name"],row["Study Label"],row["Protocol"],row["Protocol Label"],row["Study Indication"],row["Therapeutic Area"],row["Client"],row["Target App"],row["Labs"]);
             }                           
         }
 
@@ -89,7 +90,7 @@ namespace Specflow.Definations
         [When (@"I am in desginer home page")]
         public void ThenISeeDesginerHomePage()
         {
-            AssertHelper.IsElementPresent(hPage.homeIcon);
+            AssertHelper.IsElementPresent(ObjectRepository.hPage.homeIcon);
             Console.WriteLine("Home Page");
 
         }
@@ -97,11 +98,18 @@ namespace Specflow.Definations
         [Then(@"I see study has been created successfully")]
         public void ThenISeeStudyHasBeenCreatedSuccessfully()
         {
-            AssertHelper.IsElementPresent(stPage.ViewStudyJobs);
+            AssertHelper.IsElementPresent(ObjectRepository.stPage.ViewStudyJobs);
                 
         }
 
-#endregion
+        [Then(@"I Verify the subtabs (.*)")]
+        public void ThenIVerifyTheSubtabs(string tabsName)
+        {
+            //AssertHelper.IsElementPresent();
+        }
+
+
+        #endregion
 
     }
 }

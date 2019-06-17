@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using log4net;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 using SeleniumExtras.PageObjects;
 using Specflow.BaseClasses;
@@ -13,8 +14,10 @@ using System.Threading.Tasks;
 namespace Specflow.Pages
 {
     public class PageClass_StudySave:PageBase
+         
     {
         private IWebDriver driver;
+        private static readonly ILog logs = LoggerHelper.GetLogger(typeof(PageClass_StudySave));
 
         [FindsBy(How = How.XPath, Using = "//*[@id='ctl00_ctl00_ContentLeft_ContentLeft_Actions1_ActionsRepeater_ctl00_divLink']/a")]
         public IWebElement ViewStudyJobs;
@@ -39,33 +42,52 @@ namespace Specflow.Pages
         #region ActionUtilities
         public void ClickLinkFromActionPallet(string linkname)
         {
-            switch (linkname.ToUpper())
+
+            try
             {
-                case "VIEW STUDY JOBS":
-                    ViewStudyJobs.Click();
-                    break;
-                case "VERIFY STUDY":
-                    VerifyStudy.Click();
-                    break;
-                case "PUBLISH STUDY":
-                    PublishStudy.Click();
-                    break;
-                case "STUDY LABEL EDIT CHECK":
-                    StudyLabelEditCheck.Click();
-                    break;
-                case "CONFIGURE FILE NAME":
-                    ConfigureFileName.Click();
-                    break;
-                case "STUDY DESIGN SPECIFICATION (SDS)":
-                    SDS.Click();
-                    break;
-                case "EDIT CHECKS AND DERIVATIONS (EDD)":
-                    ECD.Click();
-                    break;
-                default:
-                    throw new Exception("Invalid Action pallet link :" + linkname);
-                    break;
+                switch (linkname.ToUpper())
+                {
+                    case "VIEW STUDY JOBS":
+                        ViewStudyJobs.Click();
+                        logs.Info("Clicked on View Study Jobs link ");
+                        break;
+                    case "VERIFY STUDY":
+                        VerifyStudy.Click();
+                        logs.Info("Clicked on Verify Study link ");
+                        break;
+                    case "PUBLISH STUDY":
+                        PublishStudy.Click();
+                        logs.Info("Clicked on Publish Study link ");
+                        break;
+                    case "STUDY LABEL EDIT CHECK":
+                        StudyLabelEditCheck.Click();
+                        logs.Info("Clicked on Study Label Edit Check link ");
+                        break;
+                    case "CONFIGURE FILE NAME":
+                        ConfigureFileName.Click();
+                        logs.Info("Clicked on Configure file name link ");
+                        break;
+                    case "STUDY DESIGN SPECIFICATION (SDS)":
+                        SDS.Click();
+                        logs.Info("Clicked on SDS link ");
+                        break;
+                    case "EDIT CHECKS AND DERIVATIONS (EDD)":
+                        ECD.Click();
+                        logs.Info("Clicked on EDD link ");
+                        break;
+                    default:
+                        logs.Error("Invalid link: " + linkname);
+                        throw new Exception("Invalid Action pallet link :" + linkname);
+                        break;
+                }
             }
+            catch (Exception e)
+            {
+                logs.Error(e.StackTrace);
+                GenericHelper.TakeScreenshotForMePlease();
+                throw;
+            }
+            
 
         }
         #endregion

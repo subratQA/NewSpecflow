@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using log4net;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 using SeleniumExtras.PageObjects;
 using Specflow.BaseClasses;
@@ -16,6 +17,8 @@ namespace Specflow.Pages
     public class PageClass_Login:PageBase
     {
         public IWebDriver driver;//ObjectRepository.driver;
+        private static readonly ILog logs = LoggerHelper.GetLogger(typeof(PageClass_Login));
+
         #region WebElements
         // private IWebElement userNamefield = GenericHelper.GetElement(By.Id("Login_ContentBody_txtUsername"));
         //  private IWebElement passwordfield = GenericHelper.GetElement(By.Id("Login_ContentBody_txtPassword"));
@@ -47,6 +50,7 @@ namespace Specflow.Pages
             PageFactory.InitElements(driver, this);
         }
 
+
         #endregion
 
         #region ActionUtilities
@@ -57,10 +61,12 @@ namespace Specflow.Pages
                 TextBoxHelper.ClearTextFromTextBox(userNamefield);
                 Thread.Sleep(250);
                 TextBoxHelper.SetText(userNamefield, username);
+                
                 TextBoxHelper.ClearTextFromTextBox(passwordfield);
                 Thread.Sleep(250);
-                TextBoxHelper.SetText(passwordfield, password);
+                TextBoxHelper.SetText(passwordfield, password);                
                 ButtonHelper.ClickButton(loginbtn);
+                
             }
             catch (Exception e)
             {
@@ -71,15 +77,27 @@ namespace Specflow.Pages
 
             public PageClass_Home loginToDesigner(string uname, string pwd)
             {
+            try
+            {
                 NavigationHelper.NavigateToURL(ObjectRepository.config.getUrl());
                 username.Clear();
                 Thread.Sleep(250);
                 username.SendKeys(uname);
-                 passwrd.Clear();
+                logs.Info("Text Set: " + uname);
+                passwrd.Clear();
                 Thread.Sleep(250);
-                 passwrd.SendKeys(pwd);
+                passwrd.SendKeys(pwd);
+                logs.Info("Text Set: " + pwd);
                 lgnBttn.Click();
-                return new PageClass_Home(driver);
+                logs.Info("Clicked on login button");
+            }
+            catch (Exception e)
+            {
+                logs.Error(e.StackTrace);
+                GenericHelper.TakeScreenshotForMePlease();
+                throw;
+            }
+             return new PageClass_Home(driver);
             }
 
         }
