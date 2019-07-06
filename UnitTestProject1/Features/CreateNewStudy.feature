@@ -13,17 +13,19 @@ Scenario:02_Create New Study
 	
 	Then I see study has been created successfully
 
-#Scenario Outline: 03_Verify Labs components tabs "Attribute Mapping" and "Lab Mapping"
-#	Given I Click on the "Study1" study having protocol "Sponsor1"
-#	Given I click on "Labs" Tab
-#	Then I Verify the subtabs <tabs>
-#		
-#	Examples: 
-#	|tabs|
-#	| Attribute Mappings |
-#	| Lab Mappings       | 
+@Ignore
+Scenario Outline: 03_Verify Labs components tabs "Attribute Mapping" and "Lab Mapping"
+	Given I Click on the "Study1" study having protocol "Sponsor1"
+	Given I click on "Labs" Tab
+	Then I Verify the subtabs <tabs>
+		
+	Examples: 
+	|tabs|
+	| Attribute Mappings |
+	| Lab Mappings       | 
 
-Scenario: 03_Add a New Form
+@Ignore
+Scenario: 04_Add a New Form
 	Given I Selected Study "Study1" having Sponsor/Client "Sponsor1" from Home Page
 	And  I click on "Forms" Tab
 	And I click on "Add Form" link in Forms page
@@ -32,3 +34,4 @@ Scenario: 03_Add a New Form
 	And I clicked on "Save" Icon
 	#Then I see a notification "NewForm1 has been successfully added"
 	Then I see form "NewForm1" in the table created 
+
