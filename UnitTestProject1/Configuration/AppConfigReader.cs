@@ -64,5 +64,10 @@ namespace Specflow.Configuration
         {
             return ConfigurationManager.AppSettings.Get(AppConfigKeys.Environment);
         }
+
+        public string getApplicationName()
+        {
+            return ConfigurationManager.AppSettings.Get(AppConfigKeys.ApplicationName);
+        }
     }
 }

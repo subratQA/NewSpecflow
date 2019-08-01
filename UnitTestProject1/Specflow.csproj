@@ -61,12 +61,22 @@
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <HintPath>..\packages\Office.12.0.0\lib\net40\Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="SeleniumExtras.PageObjects, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetSeleniumExtras.PageObjects.3.11.0\lib\net45\SeleniumExtras.PageObjects.dll</HintPath>
@@ -154,6 +164,8 @@
     </Compile>
     <Compile Include="Interfaces\IConfig.cs" />
     <Compile Include="Keyword Driven\DataEngine.cs" />
+    <Compile Include="LogGenerators\LogGeneratorBase.cs" />
+    <Compile Include="LogGenerators\OELogGenerator.cs" />
     <Compile Include="Pages\PageClass_EnterStudyDetail.cs" />
     <Compile Include="Pages\PageClass_Forms.cs" />
     <Compile Include="Pages\PageClass_LabMappings.cs" />
@@ -161,8 +173,11 @@
     <Compile Include="Pages\PageClass_Home.cs" />
     <Compile Include="Pages\PageClass_StudySave.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportings\ScenarioAssist.cs" />
     <Compile Include="Settings\AppConfigKeys.cs" />
     <Compile Include="Settings\ObjectRepository.cs" />
+    <Compile Include="WordUtility\MsWord.cs" />
+    <Compile Include="WordUtility\TableList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Default.srprofile">

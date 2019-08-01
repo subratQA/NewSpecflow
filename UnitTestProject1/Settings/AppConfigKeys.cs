@@ -16,5 +16,6 @@ namespace Specflow.Settings
         public const string ElementLoadTimeOut = "elementloadtimeout";
         public const string ApplicationVersion = "applicationversion";
         public const string Environment = "environment";
+        public const string ApplicationName = "applicationname";
     }
 }
