@@ -1,0 +1,25 @@
+ 06-Jun-2021-09:45:53 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 06-Jun-2021-09:45:53 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 06-Jun-2021-09:45:53 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 06-Jun-2021-09:45:53 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 06-Jun-2021-09:45:53 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Simple Form Demo')]
+ 06-Jun-2021-09:45:53 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Simple Form Demo')]
+ 06-Jun-2021-09:45:54 [Specflow.ComponentHelper.ButtonHelper][ERROR][ClickButton]-    at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at Specflow.ComponentHelper.ButtonHelper.ClickButton(By Locator) in F:\Selenium\Selenium-Git\UnitTestProject1\ComponentHelper\ButtonHelper.cs:line 20
+ 06-Jun-2021-09:45:54 [Specflow.ComponentHelper.GenericHelper][INFO][TakeScreenshotForMePlease]- Screenshot name is: Screen2021-06-06-15-54.jpeg
+ 06-Jun-2021-09:45:55 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 06-Jun-2021-09:45:55 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 06-Jun-2021-09:45:55 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 06-Jun-2021-09:45:55 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 06-Jun-2021-09:45:55 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Simple Form Demo')]
+ 06-Jun-2021-09:45:55 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Simple Form Demo')]
+ 06-Jun-2021-09:45:56 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Simple Form Demo')]
+ 06-Jun-2021-09:45:56 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.Id: sum1
+ 06-Jun-2021-09:45:56 [Specflow.ComponentHelper.TextBoxHelper][INFO][SetText]- Text set : 10
+ 06-Jun-2021-09:45:56 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.Id: sum2
+ 06-Jun-2021-09:45:56 [Specflow.ComponentHelper.TextBoxHelper][INFO][SetText]- Text set : 20
+ 06-Jun-2021-09:46:16 [Specflow.ComponentHelper.ButtonHelper][ERROR][ClickButton]-    at Specflow.ComponentHelper.GenericHelper.GetElement(By Locator) in F:\Selenium\Selenium-Git\UnitTestProject1\ComponentHelper\GenericHelper.cs:line 61
+   at Specflow.ComponentHelper.ButtonHelper.ClickButton(By Locator) in F:\Selenium\Selenium-Git\UnitTestProject1\ComponentHelper\ButtonHelper.cs:line 19

@@ -1,0 +1,40 @@
+ 16-Jun-2019-14:57:35 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : http://10.228.10.73/DS_US63129_LabsEandD/Home.aspx
+ 16-Jun-2019-14:57:36 [Specflow.Pages.PageClass_Login][INFO][loginToDesigner]- Text Set: testadmin
+ 16-Jun-2019-14:57:36 [Specflow.Pages.PageClass_Login][INFO][loginToDesigner]- Text Set: Datalabs1234
+ 16-Jun-2019-14:57:38 [Specflow.Pages.PageClass_Login][INFO][loginToDesigner]- Clicked on login button
+ 16-Jun-2019-14:57:38 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[@id='ctl00_ContentBody_ctl00_grdHome_ctl00']/tbody/tr[1]/td[2]
+ 16-Jun-2019-14:57:38 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[@id='ctl00_ContentBody_ctl00_grdHome_ctl00']/tbody/tr[1]/td[2]
+ 16-Jun-2019-14:57:38 [Specflow.ComponentHelper.WebTableHelper][INFO][GetColumnValues]- Returned column value: Study1
+ 16-Jun-2019-14:57:38 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[@id='ctl00_ContentBody_ctl00_grdHome_ctl00']/tbody/tr[1]/td[1]
+ 16-Jun-2019-14:57:38 [Specflow.ComponentHelper.WebTableHelper][INFO][GetColumnValues]- Returned column value: Sponsor1
+ 16-Jun-2019-14:57:38 [Specflow.ComponentHelper.WebTableHelper][INFO][GetRowByStudyNameAndProtcol]- Row number located: 1
+ 16-Jun-2019-14:57:38 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[@id='ctl00_ContentBody_ctl00_grdHome_ctl00']/tbody/tr[1]/td[2]
+ 16-Jun-2019-14:57:40 [Specflow.ComponentHelper.WebTableHelper][INFO][ClickButtonInColInTable]- Clicked on locator: //table[@id='ctl00_ContentBody_ctl00_grdHome_ctl00']
+ 16-Jun-2019-14:57:40 [Specflow.Pages.PageClass_Home][INFO][SelectStudy]- Pass: Clicked on the study : Study1 having protcol:Sponsor1
+ 16-Jun-2019-14:57:41 [Specflow.BaseClasses.PageBase][INFO][clickHeaderTabs]- Clicked Forms Tab
+ 16-Jun-2019-14:57:41 [Specflow.Pages.PageClass_Forms][INFO][ClickHeaderLinksInFormsPage]- Clicked on Add form link
+ 16-Jun-2019-14:57:42 [Specflow.Pages.PageClass_Forms][INFO][SetTextInFormsTableEditBoxes]- Form Name text entered : NewForm1
+ 16-Jun-2019-14:57:43 [Specflow.Pages.PageClass_Forms][INFO][SetTextInFormsTableEditBoxes]- Form Label text entered : NewFormLabel1
+ 16-Jun-2019-14:57:43 [Specflow.Pages.PageClass_Forms][INFO][ClickIconsInFormPage]- Clicked on Save icon
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[1]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[1]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[1]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetColumnValues]- Returned column value: 
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[2]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[2]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetColumnValues]- Returned column value: aa
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[3]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[3]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetColumnValues]- Returned column value: aa
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[4]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[4]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetColumnValues]- Returned column value: 04-Jun-2019 07:15:40 AM UTC
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[5]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[5]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetColumnValues]- Returned column value: 
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[6]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[6]
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetColumnValues]- Returned column value:     
+ 16-Jun-2019-14:57:43 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[1]/td[7]
+ 16-Jun-2019-14:57:51 [Specflow.ComponentHelper.WebTableHelper][INFO][GetTableXpath]- Returned webtable: //table[contains(@id,'grdForms')]/tbody/tr[2]/td[1]
+ 16-Jun-2019-14:57:51 [Specflow.Pages.PageClass_Forms][ERROR][VerifyFormNameExistInTable]- Form Name not verified : NewForm1

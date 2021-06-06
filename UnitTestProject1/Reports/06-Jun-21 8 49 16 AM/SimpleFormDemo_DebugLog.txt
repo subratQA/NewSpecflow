@@ -1,0 +1,4 @@
+ 06-Jun-2021-08:49:22 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 06-Jun-2021-08:49:22 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 06-Jun-2021-08:49:22 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 06-Jun-2021-08:49:22 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]

@@ -1,0 +1,6 @@
+ 15-Jun-2019-18:29:03 [Specflow.Pages.PageClass_Login][ERROR][loginToDesigner]-    at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.set_Url(String value)
+   at OpenQA.Selenium.Remote.RemoteNavigator.GoToUrl(String url)
+   at Specflow.ComponentHelper.NavigationHelper.NavigateToURL(String url) in C:\Users\sarkars2\Documents\Personal\Selenium Udemy\BDD Specflow\UnitTestProject1\UnitTestProject1\ComponentHelper\NavigationHelper.cs:line 16
+   at Specflow.Pages.PageClass_Login.loginToDesigner(String uname, String pwd) in C:\Users\sarkars2\Documents\Personal\Selenium Udemy\BDD Specflow\UnitTestProject1\UnitTestProject1\Pages\PageClass_Login.cs:line 81
