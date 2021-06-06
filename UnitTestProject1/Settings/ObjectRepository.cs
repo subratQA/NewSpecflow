@@ -21,6 +21,7 @@ namespace Specflow.Settings
         public static PageClass_EnterStudyDetail etPage;
         public static PageClass_LabMappings labPage;
         public static PageClass_Forms fPage;
+        public static PageClass_SimpleFormDemo simplePage;
 
     }
 }

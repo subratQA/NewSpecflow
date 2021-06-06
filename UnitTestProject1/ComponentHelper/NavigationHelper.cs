@@ -16,5 +16,11 @@ namespace Specflow.ComponentHelper
             ObjectRepository.driver.Navigate().GoToUrl(url);
             logs.Info("Navigated to url : " + url);
         }
+
+        public static void NavigateToURL()
+        {
+            ObjectRepository.driver.Navigate().GoToUrl(ObjectRepository.config.getUrl());
+            logs.Info("Navigated to url : " + ObjectRepository.config.getUrl());
+        }
     }
 }

@@ -25,8 +25,8 @@ namespace Specflow.Definations
         [Given(@"I Selected Study ""(.*)"" having Sponsor/Client ""(.*)"" from Home Page")]
         public void GivenISelectedStudyHavingProtocolFromHomepPage(string studyname, string protocol)
         {
-            hPage = new PageClass_Home(ObjectRepository.driver);
-            ObjectRepository.etPage = hPage.SelectStudy(studyname, protocol);
+            //hPage = new PageClass_Home(ObjectRepository.driver);
+            //ObjectRepository.etPage = hPage.SelectStudy(studyname, protocol);
         }
 
         [Given(@"I click on ""(.*)"" link in Forms page")]

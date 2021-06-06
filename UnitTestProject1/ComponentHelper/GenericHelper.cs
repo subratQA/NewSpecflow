@@ -49,12 +49,12 @@ namespace Specflow.ComponentHelper
 
         public static IWebElement GetElement(By Locator)
         {
-            IWebElement element = ObjectRepository.driver.FindElement(Locator);
-            if (IsElementPresent(Locator) && IsClickable(element))
+            //IWebElement element = ObjectRepository.driver.FindElement(Locator);
+            if (IsElementPresent(Locator))
             {
                 //return ObjectRepository.driver.FindElement(Locator);
-                logs.Info("Element located: " + element);
-                return element;
+                logs.Info("Element located: " + Locator);
+                return ObjectRepository.driver.FindElement(Locator);
             }
             else
             {
@@ -170,6 +170,31 @@ namespace Specflow.ComponentHelper
                 while (true)
                 {
                     if (webElement.Displayed && webElement.Size.Width > 0 && webElement.Size.Height > 0 && webElement.Enabled)
+                    {
+                        return true;
+                    }
+                    if (i == 5)
+                    {
+                        return false;
+                    }
+                    Thread.Sleep(500);
+                    ++i;
+                }
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
+
+        public static bool IsClickable(By locator)
+        {
+            try
+            {
+                int i = 0;
+                while (true)
+                {
+                    if (GetElement(locator).Displayed && GetElement(locator).Size.Width > 0 && GetElement(locator).Size.Height > 0 && GetElement(locator).Enabled)
                     {
                         return true;
                     }

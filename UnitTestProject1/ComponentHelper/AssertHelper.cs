@@ -35,7 +35,20 @@ namespace Specflow.ComponentHelper
 
                 //No exception, so that the execution should not stop if the assertion fails
             }
+        }
 
+        public static void AreEqualElement(By expected, By actual)
+        {
+            try
+            {
+                Assert.AreEqual(GenericHelper.GetElement(expected), GenericHelper.GetElement(actual), string.Format("Expected element : {0} But Actual element is :{1}", GenericHelper.GetElement(expected), GenericHelper.GetElement(actual)));
+                Assert.IsNotNull(expected);
+            }
+            catch
+            {
+
+                //No exception, so that the execution should not stop if the assertion fails
+            }
         }
         public static void IsElementPresent(IWebElement expected)
         {
@@ -51,5 +64,22 @@ namespace Specflow.ComponentHelper
             }
 
         }
+
+        public static void IsElementPresent(By expected)
+        {
+            try
+            {
+                Assert.IsNotNull(GenericHelper.GetElement(expected));
+
+            }
+            catch
+            {
+
+                //No exception, so that the execution should not stop if the assertion fails
+            }
+
+        }
+
     }
+    
 }

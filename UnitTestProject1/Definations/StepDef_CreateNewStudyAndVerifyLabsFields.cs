@@ -47,8 +47,8 @@ namespace Specflow.Definations
         {
             //PageClass_EnterStudyDetail page = new PageClass_EnterStudyDetail(driver);
             // etPage = hPage.clickActionPalletLink(link);
-            hPage = new PageClass_Home(ObjectRepository.driver);
-            ObjectRepository.etPage = ObjectRepository.hPage.clickActionPalletLink(link);
+            //hPage = new PageClass_Home(ObjectRepository.driver);
+            //ObjectRepository.etPage = ObjectRepository.hPage.clickActionPalletLink(link);
         }
 
         [Given(@"I Click on the ""(.*)"" study having protocol ""(.*)""")]
@@ -90,8 +90,8 @@ namespace Specflow.Definations
         [When (@"I am in desginer home page")]
         public void ThenISeeDesginerHomePage()
         {
-            AssertHelper.IsElementPresent(ObjectRepository.hPage.homeIcon);
-            Console.WriteLine("Home Page");
+            //AssertHelper.IsElementPresent(ObjectRepository.hPage.homeIcon);
+           // Console.WriteLine("Home Page");
 
         }
 
