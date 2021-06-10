@@ -1,0 +1,2 @@
+ 08-Jun-2021-16:16:14 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 08-Jun-2021-18:27:30 [Specflow.ComponentHelper.BrowserHelper][INFO][MaximizeBrowser]- Browser Maximized

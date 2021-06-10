@@ -86,6 +86,7 @@ namespace Specflow.BaseClasses
                 default:
                     throw new NoSuchDriverFound("Driver not found : " + ObjectRepository.config.GetBrowserType().ToString());
             }
+            
             ObjectRepository.driver.Manage().Timeouts()
                 .PageLoad = TimeSpan.FromSeconds(ObjectRepository.config.GetPageLoadTimeOut());
             ObjectRepository.driver.Manage().Timeouts()

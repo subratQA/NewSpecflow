@@ -16,19 +16,21 @@ namespace Specflow.Pages
         public IWebDriver driver;
         private static readonly ILog logs = LoggerHelper.GetLogger(typeof(PageClass_Forms));
 
+
         public PageClass_SimpleFormDemo(IWebDriver _driver)
         {
             this.driver = _driver;
             PageFactory.InitElements(_driver, this);
         }
 
-        private static By EnterMsg = By.Id("user-message");
+       
+        private static By EnterMsg = By.XPath("//input[@id='user-message']");
         private static By ShowMsgButton = By.XPath("//form[@id='get-input']/button[@type='button']");
         private static By YourMsgOutPut = By.XPath("//span[@id='display']");
         private static By InputFieldLabel = By.XPath("//div[contains(text(),'Single Input Field')]");
         private static By Value1 = By.Id("sum1");
         private static By Value2 = By.Id("sum2");
-        private static By GetTotalBtn = By.XPath("//button[@class='btn btn-default'][onclick='return total()']");
+        private static By GetTotalBtn = By.XPath("//button[contains(text(),'Get Total')]");
         private static By ShowValue = By.XPath("//span[@id='displayvalue']");
         public void SetEnterMessage(string message)
         {
@@ -64,7 +66,7 @@ namespace Specflow.Pages
             {
                 throw new Exception("Element not found: ");
             }
-            string actText = GenericHelper.GetElement(YourMsgOutPut).GetAttribute("value");
+            string actText = GenericHelper.GetElement(YourMsgOutPut).Text;
             if (!actText.Equals(output))
             {
                 Assert.Fail();
@@ -77,8 +79,8 @@ namespace Specflow.Pages
             {
                 throw new Exception("Element not found: ");
             }
-            string actText = GenericHelper.GetElement(ShowValue).GetAttribute("value");
-            if (!actText.Equals(output))
+            string actText = GenericHelper.GetElement(ShowValue).Text;
+            if (!Convert.ToInt32(actText).Equals(output))
             {
                 Assert.Fail();
             }

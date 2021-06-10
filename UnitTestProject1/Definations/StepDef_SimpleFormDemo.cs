@@ -1,4 +1,5 @@
-﻿using Specflow.ComponentHelper;
+﻿using OpenQA.Selenium;
+using Specflow.ComponentHelper;
 using Specflow.Pages;
 using Specflow.Settings;
 using System;
@@ -19,13 +20,19 @@ namespace Specflow.Definations
         public void GivenINavigateToDemoWebsite()
         {           
             NavigationHelper.NavigateToURL();
-
+            ObjectRepository.hPage = new PageClass_Home(ObjectRepository.driver);
+            if (GenericHelper.IsElementPresent(By.Id("image-darkener")))
+            {
+                ObjectRepository.hPage.ClickNoThanksBtn();
+            }
+            //GenericHelper.CanIWaitForWebelementToAppearInPage(By.Id("image-darkener"), TimeSpan.FromSeconds(10));
+            
         }
 
         [Given(@"I Select ""(.*)"" from Input Forms")]
         public void GivenISelectFromInputForms(string item)
         {
-            ObjectRepository.hPage = new PageClass_Home(ObjectRepository.driver);
+           
             ObjectRepository.simplePage =  ObjectRepository.hPage.SelectSimpleFormDemoFromInformFormList(item);
         }
 

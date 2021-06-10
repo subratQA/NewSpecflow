@@ -7,7 +7,7 @@ Background:
 	And I Select "Simple Form Demo" from Input Forms
 	Then I see Input Form Page displayed
 
-@Regression
+@Smoke
 Scenario: Test Single Input Field	
 	Given I Enter "Sample Text" in Enter Message field
 	And I click on Button Show Message

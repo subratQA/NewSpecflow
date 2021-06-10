@@ -1,0 +1,5 @@
+ 08-Jun-2021-16:10:01 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 08-Jun-2021-16:10:15 [Specflow.ComponentHelper.BrowserHelper][INFO][MaximizeBrowser]- Browser Maximized
+ 08-Jun-2021-16:10:18 [Specflow.ComponentHelper.ButtonHelper][ERROR][ClickButton]-    at Specflow.ComponentHelper.GenericHelper.GetElement(By Locator) in C:\Users\sarkars2\OneDrive - Parexel\Documents\Personal\Selenium Udemy\NewSpecflow-Sample_Selenium\UnitTestProject1\ComponentHelper\GenericHelper.cs:line 61
+   at Specflow.ComponentHelper.ButtonHelper.ClickButton(By Locator) in C:\Users\sarkars2\OneDrive - Parexel\Documents\Personal\Selenium Udemy\NewSpecflow-Sample_Selenium\UnitTestProject1\ComponentHelper\ButtonHelper.cs:line 19
+ 08-Jun-2021-16:10:19 [Specflow.ComponentHelper.GenericHelper][INFO][TakeScreenshotForMePlease]- Screenshot name is: Screen2021-06-08-40-19.jpeg

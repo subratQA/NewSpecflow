@@ -1,0 +1,27 @@
+ 08-Jun-2021-18:36:49 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 08-Jun-2021-18:36:49 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='at-cv-button at-cv-lightbox-yesno at-cm-no-button']
+ 08-Jun-2021-18:36:49 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //a[@class='at-cv-button at-cv-lightbox-yesno at-cm-no-button']
+ 08-Jun-2021-18:36:49 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-18:36:49 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-18:36:49 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-18:36:49 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Checkbox Demo')]
+ 08-Jun-2021-18:36:50 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Checkbox Demo')]
+ 08-Jun-2021-18:36:50 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Checkbox Demo')]
+ 08-Jun-2021-18:36:50 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //input[@value='Check All']
+ 08-Jun-2021-18:36:51 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //input[@value='Check All']
+ 08-Jun-2021-18:36:51 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //input[@value='Uncheck All']
+ 08-Jun-2021-18:36:51 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //input[@value='Uncheck All']
+ 08-Jun-2021-18:36:51 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //input[@value='Uncheck All']
+ 08-Jun-2021-18:36:51 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //input[@value='Check All']
+ 08-Jun-2021-18:36:52 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 08-Jun-2021-18:37:22 [Specflow.ComponentHelper.ButtonHelper][ERROR][ClickButton]-    at Specflow.ComponentHelper.GenericHelper.GetElement(By Locator) in C:\Users\sarkars2\OneDrive - Parexel\Documents\Personal\Selenium Udemy\NewSpecflow-Sample_Selenium\UnitTestProject1\ComponentHelper\GenericHelper.cs:line 61
+   at Specflow.ComponentHelper.ButtonHelper.ClickButton(By Locator) in C:\Users\sarkars2\OneDrive - Parexel\Documents\Personal\Selenium Udemy\NewSpecflow-Sample_Selenium\UnitTestProject1\ComponentHelper\ButtonHelper.cs:line 19
+ 08-Jun-2021-18:37:23 [Specflow.ComponentHelper.GenericHelper][INFO][TakeScreenshotForMePlease]- Screenshot name is: Screen2021-06-08-07-23.jpeg
+ 08-Jun-2021-18:37:24 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 08-Jun-2021-18:37:54 [Specflow.ComponentHelper.ButtonHelper][ERROR][ClickButton]-    at Specflow.ComponentHelper.GenericHelper.GetElement(By Locator) in C:\Users\sarkars2\OneDrive - Parexel\Documents\Personal\Selenium Udemy\NewSpecflow-Sample_Selenium\UnitTestProject1\ComponentHelper\GenericHelper.cs:line 61
+   at Specflow.ComponentHelper.ButtonHelper.ClickButton(By Locator) in C:\Users\sarkars2\OneDrive - Parexel\Documents\Personal\Selenium Udemy\NewSpecflow-Sample_Selenium\UnitTestProject1\ComponentHelper\ButtonHelper.cs:line 19
+ 08-Jun-2021-18:37:54 [Specflow.ComponentHelper.GenericHelper][INFO][TakeScreenshotForMePlease]- Screenshot name is: Screen2021-06-08-07-54.jpeg
+ 08-Jun-2021-18:37:57 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 08-Jun-2021-18:38:27 [Specflow.ComponentHelper.ButtonHelper][ERROR][ClickButton]-    at Specflow.ComponentHelper.GenericHelper.GetElement(By Locator) in C:\Users\sarkars2\OneDrive - Parexel\Documents\Personal\Selenium Udemy\NewSpecflow-Sample_Selenium\UnitTestProject1\ComponentHelper\GenericHelper.cs:line 61
+   at Specflow.ComponentHelper.ButtonHelper.ClickButton(By Locator) in C:\Users\sarkars2\OneDrive - Parexel\Documents\Personal\Selenium Udemy\NewSpecflow-Sample_Selenium\UnitTestProject1\ComponentHelper\ButtonHelper.cs:line 19
+ 08-Jun-2021-18:38:28 [Specflow.ComponentHelper.GenericHelper][INFO][TakeScreenshotForMePlease]- Screenshot name is: Screen2021-06-08-08-28.jpeg

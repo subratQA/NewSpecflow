@@ -1,0 +1,50 @@
+ 08-Jun-2021-13:13:53 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 08-Jun-2021-13:13:53 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-13:13:53 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-13:13:55 [Specflow.ComponentHelper.ButtonHelper][ERROR][ClickButton]-    at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at Specflow.ComponentHelper.ButtonHelper.ClickButton(By Locator) in C:\Users\sarkars2\OneDrive - Parexel\Documents\Personal\Selenium Udemy\NewSpecflow-Sample_Selenium\UnitTestProject1\ComponentHelper\ButtonHelper.cs:line 20
+ 08-Jun-2021-13:13:55 [Specflow.ComponentHelper.GenericHelper][INFO][TakeScreenshotForMePlease]- Screenshot name is: Screen2021-06-08-43-55.jpeg
+ 08-Jun-2021-13:13:57 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 08-Jun-2021-13:13:57 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-13:13:57 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-13:13:57 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-13:13:57 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Checkbox Demo')]
+ 08-Jun-2021-13:13:57 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Checkbox Demo')]
+ 08-Jun-2021-13:13:58 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Checkbox Demo')]
+ 08-Jun-2021-13:13:58 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/label[1]
+ 08-Jun-2021-13:13:58 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/label[1]
+ 08-Jun-2021-13:13:58 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/label[1]
+ 08-Jun-2021-13:13:58 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/label[1]
+ 08-Jun-2021-13:13:58 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/label[1]
+ 08-Jun-2021-13:13:58 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[3]/label[1]
+ 08-Jun-2021-13:13:58 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[4]/label[1]
+ 08-Jun-2021-13:13:59 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[4]/label[1]
+ 08-Jun-2021-13:13:59 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //input[@value='Uncheck All']
+ 08-Jun-2021-13:14:00 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 08-Jun-2021-13:14:00 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-13:14:00 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-13:14:00 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-13:14:00 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Checkbox Demo')]
+ 08-Jun-2021-13:14:00 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Checkbox Demo')]
+ 08-Jun-2021-13:14:00 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Checkbox Demo')]
+ 08-Jun-2021-13:14:00 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/label[1]
+ 08-Jun-2021-13:14:00 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //body[1]/div[2]/div[1]/div[2]/div[2]/div[2]/div[1]/label[1]
+ 08-Jun-2021-13:14:00 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //input[@value='Check All']
+ 08-Jun-2021-13:14:01 [Specflow.ComponentHelper.NavigationHelper][INFO][NavigateToURL]- Navigated to url : https://www.seleniumeasy.com/test
+ 08-Jun-2021-13:14:01 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-13:14:01 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-13:14:01 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //a[@class='dropdown-toggle'][contains(text(),'Input Forms')]
+ 08-Jun-2021-13:14:01 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Simple Form Demo')]
+ 08-Jun-2021-13:14:02 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Simple Form Demo')]
+ 08-Jun-2021-13:14:03 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //ul[@class='dropdown-menu']//a[contains(text(),'Simple Form Demo')]
+ 08-Jun-2021-13:14:03 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.Id: sum1
+ 08-Jun-2021-13:14:03 [Specflow.ComponentHelper.TextBoxHelper][INFO][SetText]- Text set : 10
+ 08-Jun-2021-13:14:03 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.Id: sum2
+ 08-Jun-2021-13:14:03 [Specflow.ComponentHelper.TextBoxHelper][INFO][SetText]- Text set : 20
+ 08-Jun-2021-13:14:03 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //button[contains(text(),'Get Total')]
+ 08-Jun-2021-13:14:03 [Specflow.ComponentHelper.ButtonHelper][INFO][ClickButton]- Button clicked : By.XPath: //button[contains(text(),'Get Total')]
+ 08-Jun-2021-13:14:03 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //span[@id='displayvalue']
+ 08-Jun-2021-13:14:04 [Specflow.ComponentHelper.GenericHelper][INFO][GetElement]- Element located: By.XPath: //span[@id='displayvalue']
